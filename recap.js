@@ -25,11 +25,15 @@ document.write("\\Dia juga bakalan\\bikin tutorial design\n");
 document.write("\"Masak-masak dan seputar tips lainnya\"\n");
 document.write("</textarea>");
 //  ========== Variable ========== 
-var fullName = "Fauzan Ahmad";
-var lastName = "Gokil";
-for (var i = 1; i <= 1000; i++) {
-    document.writeln(i + ". " + fullName + " " + lastName + "<br>");
+let fullName = "Fauzan Ahmad",
+    nickName = "Ujang",
+    passion;
+
+for (let i = 1; i <= 5; i++) {
+    passion = "Design";
+    document.writeln(i + ". " + fullName + " " + nickName + " " + passion + "<br>");
 }
+
 document.writeln(fullName + "<br>");
 document.writeln(fullName + "<br>");
 document.writeln(fullName + "<br>");
@@ -40,7 +44,12 @@ document.writeln(fullName + "<br>");
 document.writeln(fullName + "<br>");
 document.writeln(fullName + "<br>");
 document.writeln(fullName + "<br>");
+
+const app = "Belajar yang rajin";
+// app = "males mom"; tidak boleh diubah
+document.writeln(app + "<br>");
 //  ========== Operator Matematika ========== 
+
 //  ========== Operator Perbandingan ========== 
 //  ========== Operator Logika ========== 
 //  ========== Console ========== 
