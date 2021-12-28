@@ -1,0 +1,7 @@
+javascript adalah bahasa pemrograman typescript
+
+## Titik Koma
+-Javascript mirip C/C++ perlu tambahain ; diakhir
+-di javascript tidak wajib
+-Sangat disarankan konsisten. kalo dari awal pake ";" maka sampai selesai wajib pake juga
+-mending pake biar terbiasa 
