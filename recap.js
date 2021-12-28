@@ -7,10 +7,37 @@ document.writeln("Hello World");
 */
 
 //  ========== Tipe Data Number ==========
-
+document.writeln("Bulat " + 100 * 100);
+document.writeln("<br>");
+document.writeln("Pecahan " + 100.5 * 100);
+document.writeln("<br>");
+document.writeln("Binary " + 0b110011);
 //  ========== Tipe Data Boolean ========== 
+document.writeln("<br>" + "Boolean : " + true);
+document.writeln("<br>" + "Boolean : " + false);
 //  ========== Tipe Data String ========== 
+document.writeln("<br>" + "Fauzan Ahmad");
+document.writeln("<br>" + "Programmer Kelaperan" + "<br>");
+document.write("<textarea cols='100' rows='10'>");
+document.write("Programmer Kelaperan\n");
+document.write("\tAda video tiap minggu katanya\n");
+document.write("\\Dia juga bakalan\\bikin tutorial design\n");
+document.write("\"Masak-masak dan seputar tips lainnya\"\n");
+document.write("</textarea>");
 //  ========== Variable ========== 
+var nama = "Fauzan Ahmad";
+for (var i = 1; i <= 1000; i++) {
+    document.writeln(i + ". " + nama + "<br>");
+}
+document.writeln(nama + "<br>");
+document.writeln(nama + "<br>");
+document.writeln(nama + "<br>");
+document.writeln(nama + "<br>");
+document.writeln(nama + "<br>");
+document.writeln(nama + "<br>");
+document.writeln(nama + "<br>");
+document.writeln(nama + "<br>");
+document.writeln(nama + "<br>");
 //  ========== Operator Matematika ========== 
 //  ========== Operator Perbandingan ========== 
 //  ========== Operator Logika ========== 
