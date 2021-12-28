@@ -25,19 +25,21 @@ document.write("\\Dia juga bakalan\\bikin tutorial design\n");
 document.write("\"Masak-masak dan seputar tips lainnya\"\n");
 document.write("</textarea>");
 //  ========== Variable ========== 
-var nama = "Fauzan Ahmad";
+var fullName = "Fauzan Ahmad";
+var lastName = "Gokil";
 for (var i = 1; i <= 1000; i++) {
-    document.writeln(i + ". " + nama + "<br>");
+    document.writeln(i + ". " + fullName + " " + lastName + "<br>");
 }
-document.writeln(nama + "<br>");
-document.writeln(nama + "<br>");
-document.writeln(nama + "<br>");
-document.writeln(nama + "<br>");
-document.writeln(nama + "<br>");
-document.writeln(nama + "<br>");
-document.writeln(nama + "<br>");
-document.writeln(nama + "<br>");
-document.writeln(nama + "<br>");
+document.writeln(fullName + "<br>");
+document.writeln(fullName + "<br>");
+document.writeln(fullName + "<br>");
+fullName = "hartono"; // ubah value
+document.writeln(fullName + "<br>");
+document.writeln(fullName + "<br>");
+document.writeln(fullName + "<br>");
+document.writeln(fullName + "<br>");
+document.writeln(fullName + "<br>");
+document.writeln(fullName + "<br>");
 //  ========== Operator Matematika ========== 
 //  ========== Operator Perbandingan ========== 
 //  ========== Operator Logika ========== 

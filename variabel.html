@@ -15,20 +15,38 @@
         - Variable adalah tempat untuk menyimpan data
         - dengan menyimpan data pada variabel, kita dapat menggunakan data tersebut berulang-ulang
         - JS adalah dynamic language, dimana variabelnya dapat menampung seluruh tipe data
+
+        camelCase js Variable
+
+        # Cara Mengubah data pada variabel
+        - dengan menggunakan namaVariabel = valueBaru;
+
+        ES6 atau ECMAScript 6 
+        var ganti dengan let,const 
+        karna var memiliki masalah yang dapat di googling 
+
+        ## kata kunci Const
+        merupakan jenis variable yang dimaba valuenya tidak dapat diubah, berbeda dengan LET yang mirip dengan VAR
         */
-        var nama = "Fauzan Ahmad";
-        for (var i = 1; i <= 1000; i++) {
-            document.writeln(i + ". " + nama + "<br>");
+        let fullName = "Fauzan Ahmad",
+            nickName = "Ujang",
+            passion;
+
+        for (let i = 1; i <= 5; i++) {
+            passion = "Design";
+            document.writeln(i + ". " + fullName + " " + nickName + " " + passion + "<br>");
         }
-        document.writeln(nama + "<br>");
-        document.writeln(nama + "<br>");
-        document.writeln(nama + "<br>");
-        document.writeln(nama + "<br>");
-        document.writeln(nama + "<br>");
-        document.writeln(nama + "<br>");
-        document.writeln(nama + "<br>");
-        document.writeln(nama + "<br>");
-        document.writeln(nama + "<br>");
+
+        document.writeln(fullName + "<br>");
+        document.writeln(fullName + "<br>");
+        document.writeln(fullName + "<br>");
+        fullName = "hartono"; // ubah value
+        document.writeln(fullName + "<br>");
+        document.writeln(fullName + "<br>");
+        document.writeln(fullName + "<br>");
+        document.writeln(fullName + "<br>");
+        document.writeln(fullName + "<br>");
+        document.writeln(fullName + "<br>");
     </script>
 </body>
 
