@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator : Logika </title>
+</head>
+
+<body>
+    <script>
+        /*
+        ## Operator Perbandingan 
+        • adalah operasi untuk membandingkan dua buah data
+        • operasi yang menghasilkan nilai boolean (true or false)
+        • jika hasilnya benar, maka nilainya true 
+        • jika hasilnya salah, maka nilainya false
+        • Operator ini digunakan untuk membandingkan dua data boolean
+
+        ## Seperti Berikut
+        • && : Dan
+        • || : atau
+        • ! : Kebalikan (not)
+        */
+        // =========== Operator Perbandingan ===========
+        document.writeln("<p> =========== && / Dan ===========</p>");
+        let result = true && true;
+        document.writeln("<p> true && true = " + result + "</p>");
+        result = true && false;
+        document.writeln("<p> true && false = " + result + "</p>");
+        result = false && true;
+        document.writeln("<p> false && true = " + result + "</p>");
+        result = false && false;
+        document.writeln("<p> false && false = " + result + "</p>");
+
+        document.writeln("<p> =========== || / Atau ===========</p>");
+        result = true || true;
+        document.writeln("<p> true || true = " + result + "</p>");
+        result = true || false;
+        document.writeln("<p> true || false = " + result + "</p>");
+        result = false || true;
+        document.writeln("<p> false || true = " + result + "</p>");
+        result = false || false;
+        document.writeln("<p> false || false = " + result + "</p>");
+
+        document.writeln("<p> =========== ! (operator unary) / Kebalikan ===========</p>");
+        result = !true;
+        document.writeln("<p> !true = " + result + "</p>");
+        result = !false;
+        document.writeln("<p> !false = " + result + "</p>");
+
+        document.writeln("<p> =========== contoh logika ===========</p>");
+        const nilaiUjian = 70, nilaiAbsensi = 70, lulusUjian = nilaiUjian > 75, lulusAbsensi = nilaiAbsensi > 75;
+        document.writeln("<p> nilai ujian = " + nilaiUjian + " </p>");
+        document.writeln("<p> nilai absensi = " + nilaiAbsensi + " </p>");
+        document.writeln("<p> lulus ujian = " + lulusUjian + " </p>");
+        document.writeln("<p> lulus absensi = " + lulusAbsensi + " </p>");
+        const lulus = lulusUjian && lulusAbsensi;
+        document.writeln("<p> Saya ... (true=lulus, false=tidak lulus) = <strong>" + lulus + "</strong></p>");
+
+    </script>
+</body>
+
+</html>
