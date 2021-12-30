@@ -91,6 +91,11 @@ document.writeln("<p> Saya ... (true=lulus, false=tidak lulus) = <strong>" + lul
 
 //  ========== Operator Logika ========== 
 //  ========== Console ========== 
+document.writeln("<p><strong>Press F12 atau inspect/console</strong></p>");
+console.debug("Hello World,Debug");
+console.info("Hello World");
+console.warn("Hello World, Ini peringatan Loh !");
+console.error("Hello World, Ini error loh !");
 //  ========== String Template ========== 
 //  ========== Konversi String dan Number ========== 
 //  ========== Tipe Data Array ========== 
