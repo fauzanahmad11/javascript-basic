@@ -107,6 +107,26 @@ const nilai = 81;
 const templateTwo = `Name : ${name}, Lulus : ${nilai > 80}`;
 console.info(templateTwo);
 //  ========== Konversi String dan Number ========== 
+document.writeln("<p><strong>Press F12 or inspect/console</strong></p>");
+document.writeln("<p><strong>==============Konversi String dan Number==============</strong></p>");
+const val1 = parseInt("2");
+const val2 = 1;
+const sum = val1 + val2;
+document.writeln(`<p>${sum}</p>`);
+document.writeln(`<p>${parseInt("1.3")}</p>`);
+document.writeln(`<p>${parseFloat("1.3")}</p>`);
+document.writeln(`<p>${Number("1.3")}</p>`);
+
+const a = 1;
+const b = 2;
+const total = a.toString() + b;
+document.writeln(`total ${total}`);
+
+document.writeln("<p><strong>==============NaN (Not a Number)==============</strong></p>");
+document.writeln(`<p>${parseInt("salah")}</p>`);
+document.writeln(`<p>${parseFloat("1.3Text Loh")}</p>`);
+// Number(string) tidak mentolerir kesalahan pada data, berbeda dengan parseInt atau parseFloat yang masih mentolerir kesalahan data
+document.writeln(`<p>${Number("1.3Text Loh")}</p>`);
 //  ========== Tipe Data Array ========== 
 //  ========== Tipe Data Object ========== 
 //  ========== If Expression ========== 
