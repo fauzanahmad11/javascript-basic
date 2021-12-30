@@ -23,6 +23,11 @@
         ● Jika data string yang kita coba lakukan konversi bukan lah data valid, maka hasil dari konversi tersebut adalah NaN (Not a Number)
         ● NaN adalah number spesial yang menyebutkan bahwa ini bukanlah number
         ● Jika NaN dioperasikan dengan data number lainnya, maka hasilnya akan menjadi NaN lagi
+
+        ## isNaN Function
+        ● Kadang kita ingin mengecek apakah sebuah number itu NaN atau bukan
+        ● Untuk melakukan pengecekan tersebut, kita bisa menggunakan function isNaN(number)
+        ● Hasil nya adalah berupa data boolean, true jika NaN, false jika bukan
         */
         document.writeln("<p><strong>Press F12 or inspect/console</strong></p>");
         document.writeln("<p><strong>==============Konversi String dan Number==============</strong></p>");
@@ -34,9 +39,9 @@
         document.writeln(`<p>${parseFloat("1.3")}</p>`);
         document.writeln(`<p>${Number("1.3")}</p>`);
 
-        const a = 1;
-        const b = 2;
-        const total = a.toString() + b;
+        let a = 1;
+        let b = 2;
+        let total = a.toString() + b;
         document.writeln(`total ${total}`);
 
         document.writeln("<p><strong>==============NaN (Not a Number)==============</strong></p>");
@@ -44,6 +49,18 @@
         document.writeln(`<p>${parseFloat("1.3Text Loh")}</p>`);
         // Number(string) tidak mentolerir kesalahan pada data, berbeda dengan parseInt atau parseFloat yang masih mentolerir kesalahan data
         document.writeln(`<p>${Number("1.3Text Loh")}</p>`);
+
+        document.writeln("<p><strong>==============Operasi pada NaN (Not a Number)==============</strong></p>");
+        a = Number("salah");
+        total = a + 2;
+        document.writeln(`<p> total dari Number("salah") + 2 = <strong> ${total}</strong></p>`);
+
+        document.writeln("<p><strong>==============isNaN Function==============</strong></p>");
+        a = Number("salah");
+        total = a + 2;
+        document.writeln(`<p> isNaN("salah") = <strong> ${isNaN("salah")}</strong></p>`);
+        document.writeln(`<p> isNaN(${b}) = <strong> ${isNaN(b)}</strong></p>`);
+        document.writeln(`<p> isNaN(NaN) = <strong> ${isNaN(NaN)}</strong></p>`);
     </script>
 </body>
 
