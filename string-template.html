@@ -11,26 +11,26 @@
 <body>
     <script>
         /*
-        ## Console
-        ○ JS memiliki fitur untuk melakukan logging bernama console 
-        ○ Logging adalah mekanisme yang biasa dilakukan oleh programmer untuk menampilkan informasi dari aplikasi yang sedang berjalan, tanpa harus mengganggu alur kerja aplikasi dan juga interaksi user.
-        ○ untuk melakukan iini, kita bisa menggunakan fitur console diJS
-        ○ Untuk menggunakan console, kita cukup menggunakan consolen di kode JavaScript
-        ○ Biasanya digunakan untuk Debugging atau mencari masalah
-
-        ## Console Method
-        ○ Console.debug(...) | Memberitahu Informasi Kecil | Jarang Digunakan
-        ○ Console.info(...) | Memberitahu Informasi 
-        ○ Console.warn(...) | Memberitahu Informasi Peringatan
-        ○ Console.error(...) | Memberitahu Informasi Error
-        ○ Console.table(...) | Memberitahu Informasi Dalam Bentuk Table
+        ## String Template
+        ● Kita sudah tahu bahwa untuk menambahkan string dengan data lain, kita bisa menggunakan operator + (plus)
+        ● Namun pada kasus tertentu, penggunaan operator + (plus) sangat menyulitkan, apalagi jika dalam jumlah banyak
+        ● JavaScript memiliki fitur yang bernama String Template, dimana kita bisa mensubtitusi data dari luar String ke dalam String, seperti mengambil data variable, atau bahkan melakukan operasi matematika
+        ● Untuk menggunakan String Template, cara pembuatan String nya harus menggunakan ` (backtick), bukan ‘ (petik satu) atau “ (petik dua)
         */
-        // =========== Console ===========
+        const name = "Fauzan Ahmad";
+        const hobby = "makan nasi uduk";
+        const template = `Name : ${name}, Hobby : ${hobby}`;
         document.writeln("<p><strong>Press F12 atau inspect/console</strong></p>");
-        console.debug("Hello World,Debug");
-        console.info("Hello World");
-        console.warn("Hello World, Ini peringatan Loh !");
-        console.error("Hello World, Ini error loh !");
+        console.info(template);
+        // With expression ">"
+        const nilai = 81;
+        const templateExpression = `Name : ${name}, Lulus : ${nilai > 80}`;
+        console.info(templateExpression);
+        // With Multiline String/Bisa di ENTER
+        const templateMultiline = `Hy nama saya fauzan ahmad,
+        apakah namamu ahmad juga ? tentu tidak dong.
+        malam tahun baru enaknya ngapain yah ? Tidur dong hahahah`;
+        console.info(templateMultiline);
 
     </script>
 </body>

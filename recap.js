@@ -97,6 +97,15 @@ console.info("Hello World");
 console.warn("Hello World, Ini peringatan Loh !");
 console.error("Hello World, Ini error loh !");
 //  ========== String Template ========== 
+const name = "Fauzan Ahmad";
+const hobby = "makan nasi uduk";
+const template = `Name : ${name}, Hobby : ${hobby}`;
+document.writeln("<p><strong>Press F12 atau inspect/console</strong></p>");
+console.info(template);
+// With expression ">"
+const nilai = 81;
+const templateTwo = `Name : ${name}, Lulus : ${nilai > 80}`;
+console.info(templateTwo);
 //  ========== Konversi String dan Number ========== 
 //  ========== Tipe Data Array ========== 
 //  ========== Tipe Data Object ========== 
