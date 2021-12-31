@@ -241,6 +241,13 @@ alert("Halo dunia !!");
 const nama = prompt("Whats your name sir ?");
 alert(`My name is ${nama}`);
 
+const masuk = confirm("Anda yakin masuk ? Didalam gelap loh!!");
+if (masuk) {
+    const nama = prompt("Siapa lagi namamu ?");
+    alert(`Namas saya ${nama}`);
+} else {
+    alert("Bye bye !");
+}
 
 //  ========== Undefined ========== 
 //  ========== Null ========== 
