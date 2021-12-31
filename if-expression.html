@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Expression</title>
+</head>
+
+<body>
+    <script>
+        /*
+        ## IF Expression atau percabangan
+        ● Dalam JavaScript, if adalah salah satu kata kunci yang digunakan untuk percabangan
+        ● Percabangan artinya kita bisa mengeksekusi kode program tertentu ketika suatu kondisi terpenuhi
+        ● Hampir di semua bahasa pemrograman mendukung if expression
+
+        ## Operasi di Array
+
+        */
+
+        let objectKosong = {};
+
+        // Mengubah Property di Object
+        const mahasiswa = {};
+
+        // Menambah atau mengubah
+        mahasiswa["nama"] = "Fauzan Ahmad";
+        mahasiswa["alamat"] = "Indonesia";
+        mahasiswa["umur"] = "30";
+
+        // Menghapus
+        delete mahasiswa["umur"];
+        console.table(mahasiswa);
+
+        // Membuat object dengan properties
+        let orang = {
+            "nama kamu": "Fauzan Ahmad",
+            alamat: "Indonesia",
+            umur: 30,
+        };
+        console.table(orang);
+
+        // Mengakses Property Object
+        console.info(`Nama : ${orang["nama kamu"]}`);
+        console.info(`Alamat : ${orang.alamat}`);
+        console.info(`Umur : ${orang.umur}`);
+
+
+    </script>
+</body>
+
+</html>
