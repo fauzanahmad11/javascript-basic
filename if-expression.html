@@ -16,37 +16,25 @@
         ● Percabangan artinya kita bisa mengeksekusi kode program tertentu ketika suatu kondisi terpenuhi
         ● Hampir di semua bahasa pemrograman mendukung if expression
 
-        ## Operasi di Array
+        ## Else Expression
+        ● Blok if akan dieksekusi ketika kondisi if bernilai true
+        ● Kadang kita ingin melakukan eksekusi program tertentu jika kondisi if bernilai false
+        ● Hal ini bisa dilakukan menggunakan else expression
 
+        ## Else If Expression
+        ● Kadang dalam If, kita butuh membuat beberapa kondisi
+        ● Kasus seperti ini, di JavaScript kita bisa menggunakan Else If expression
         */
 
-        let objectKosong = {};
-
-        // Mengubah Property di Object
-        const mahasiswa = {};
-
-        // Menambah atau mengubah
-        mahasiswa["nama"] = "Fauzan Ahmad";
-        mahasiswa["alamat"] = "Indonesia";
-        mahasiswa["umur"] = "30";
-
-        // Menghapus
-        delete mahasiswa["umur"];
-        console.table(mahasiswa);
-
-        // Membuat object dengan properties
-        let orang = {
-            "nama kamu": "Fauzan Ahmad",
-            alamat: "Indonesia",
-            umur: 30,
-        };
-        console.table(orang);
-
-        // Mengakses Property Object
-        console.info(`Nama : ${orang["nama kamu"]}`);
-        console.info(`Alamat : ${orang.alamat}`);
-        console.info(`Umur : ${orang.umur}`);
-
+        const examValue = 60;
+        if (examValue > 80) {
+            document.writeln(`<p>Good Job</p>`);
+        } else if (examValue > 60) {
+            document.writeln(`<p>Not Bad</p>`);
+        } else {
+            document.writeln(`<p>Try Again Mas !</p>`);
+            alert(`Bener2 deh anda ${prompt("Belajar lagi besok, masukan NIM mu mas !!!")}`);
+        }
 
     </script>
 </body>

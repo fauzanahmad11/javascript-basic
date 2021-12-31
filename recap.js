@@ -226,7 +226,22 @@ document.writeln(`<p> isNaN(NaN) = <strong> ${isNaN(NaN)}</strong></p>`);
 //  ========== Tipe Data Array ========== 
 //  ========== Tipe Data Object ========== 
 //  ========== If Expression ========== 
+const examValue = 60;
+if (examValue > 80) {
+    document.writeln(`<p>Good Job</p>`);
+} else if (examValue > 60) {
+    document.writeln(`<p>Not Bad</p>`);
+} else {
+    document.writeln(`<p>Try Again Mas !</p>`);
+    alert(`Bener2 deh anda ${prompt("Belajar lagi besok, masukan NIM mu mas !!!")}`);
+}
 //  ========== Popup ========== 
+alert("Halo dunia !!");
+
+const nama = prompt("Whats your name sir ?");
+alert(`My name is ${nama}`);
+
+
 //  ========== Undefined ========== 
 //  ========== Null ========== 
 //  ========== Switch Expression ========== 
