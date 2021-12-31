@@ -12,35 +12,40 @@
     <script>
         /*
         ## Tipe Data Array
-        ● Array adalah tipe data yang berisikan kumpulan data
-        ● Array di JavaScript memiliki sifat dinamis, artinya datanya bisa bertambah dengan sendirinya saat
-        kita memasukkan data ke dalam Array
+        ● Tipe data object adalah tipe data yang mirip dengan tipe data Array
+        ● Yang membedakan adalah index pada tipe data object bisa menggunakan string
+        ● Index di object biasanya disebut attributes atau properties, bukan index
 
         ## Operasi di Array
-        ● array.push(value) = Menambah data ke Array
-        ● array.length = Untuk mendapatkan panjang Array
-        ● array[index] Mendapat data di posisi index
-        ● array[index] = value Mengubah data di posisi index
-        ● delete array[index] Menghapus data di posisi index, namun index tidak bergeser
 
         */
 
-        let arrayKosong = [];
-        let arrayNama = ["Fauzan", "Judi", "Nadim"];
-        document.writeln(`<p>Press f12</p>`);
-        console.info(`daftar nama `);
-        console.table(arrayNama);
-        console.info(`tambah nama "Aldi"`);
-        arrayNama.push("Aldi");
-        console.table(arrayNama);
-        console.info(`tambah nama "Saldi", "Jono"`);
-        arrayNama.push("Saldi", "Jono");
-        console.table(arrayNama);
-        arrayNama[0] = "Fauzan Ahmad";
-        console.table(arrayNama);
-        console.info(`delete data array terakhir`);
-        delete arrayNama[arrayNama.length - 1];
-        console.table(arrayNama);
+        let objectKosong = {};
+
+        // Mengubah Property di Object
+        const mahasiswa = {};
+
+        // Menambah atau mengubah
+        mahasiswa["nama"] = "Fauzan Ahmad";
+        mahasiswa["alamat"] = "Indonesia";
+        mahasiswa["umur"] = "30";
+
+        // Menghapus
+        delete mahasiswa["umur"];
+        console.table(mahasiswa);
+
+        // Membuat object dengan properties
+        let orang = {
+            "nama kamu": "Fauzan Ahmad",
+            alamat: "Indonesia",
+            umur: 30,
+        };
+        console.table(orang);
+
+        // Mengakses Property Object
+        console.info(`Nama : ${orang["nama kamu"]}`);
+        console.info(`Alamat : ${orang.alamat}`);
+        console.info(`Umur : ${orang.umur}`);
 
 
     </script>

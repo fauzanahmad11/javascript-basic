@@ -53,6 +53,44 @@ const app = "Belajar yang rajin";
 document.writeln(app + "<br>");
 
 //  ========== Operator Matematika ========== 
+document.writeln("<p>======================Operator Matematika=====================</p>");
+let result = 1 + 2;
+document.writeln("<p>1 + 2 = " + result + "</p>");
+let originalResult = result;
+result = result - 1;
+document.writeln("<p>" + originalResult + " - 1 = " + result + "</p>");
+originalResult = result;
+result = result * 2;
+document.writeln("<p>" + originalResult + " * 2 = " + result + "</p>");
+originalResult = result;
+result = result ** 2;
+document.writeln("<p>" + originalResult + " ^ 2 = " + result + "</p>");
+originalResult = result;
+result = result / 3;
+document.writeln("<p>" + originalResult + " / 3 = " + result + "</p>");
+originalResult = result;
+
+document.writeln("<p>====================Operator Augmented Assignment=======================</p>");
+
+result = 1 + 2;
+document.writeln("<p>1 + 2 = " + result + "</p>");
+originalResult = result;
+result -= 1;
+document.writeln("<p>" + originalResult + " - 1 = " + result + "</p>");
+originalResult = result;
+result *= 2;
+document.writeln("<p>" + originalResult + " * 2 = " + result + "</p>");
+originalResult = result;
+result **= 2;
+document.writeln("<p>" + originalResult + " ^ 2 = " + result + "</p>");
+originalResult = result;
+result %= 3;
+document.writeln("<p>" + originalResult + " ^ 2 = " + result + "</p>");
+originalResult = result;
+result /= 3;
+document.writeln("<p>" + originalResult + " / 3 = " + result + "</p>");
+originalResult = result;
+document.writeln("<p>===========================================</p>");
 
 //  ========== Operator Perbandingan ========== 
 document.writeln("<p> =========== && / Dan ===========</p>");
@@ -94,6 +132,44 @@ const lulus = lulusUjian && lulusAbsensi;
 document.writeln("<p> Saya ... (true=lulus, false=tidak lulus) = <strong>" + lulus + "</strong></p>");
 
 //  ========== Operator Logika ========== 
+document.writeln("<p> =========== && / Dan ===========</p>");
+let result = true && true;
+document.writeln("<p> true && true = " + result + "</p>");
+result = true && false;
+document.writeln("<p> true && false = " + result + "</p>");
+result = false && true;
+document.writeln("<p> false && true = " + result + "</p>");
+result = false && false;
+document.writeln("<p> false && false = " + result + "</p>");
+
+document.writeln("<p> =========== || / Atau ===========</p>");
+result = true || true;
+document.writeln("<p> true || true = " + result + "</p>");
+result = true || false;
+document.writeln("<p> true || false = " + result + "</p>");
+result = false || true;
+document.writeln("<p> false || true = " + result + "</p>");
+result = false || false;
+document.writeln("<p> false || false = " + result + "</p>");
+
+document.writeln("<p> =========== ! (operator unary) / Kebalikan ===========</p>");
+result = !true;
+document.writeln("<p> !true = " + result + "</p>");
+result = !false;
+document.writeln("<p> !false = " + result + "</p>");
+
+document.writeln("<p> =========== contoh logika ===========</p>");
+const nilaiUjian = 76,
+    nilaiAbsensi = 76,
+    lulusUjian = nilaiUjian > 75,
+    lulusAbsensi = nilaiAbsensi > 75;
+document.writeln("<p> nilai ujian = " + nilaiUjian + " </p>");
+document.writeln("<p> nilai absensi = " + nilaiAbsensi + " </p>");
+document.writeln("<p> lulus ujian = " + lulusUjian + " </p>");
+document.writeln("<p> lulus absensi = " + lulusAbsensi + " </p>");
+const lulus = lulusUjian && lulusAbsensi;
+document.writeln("<p> Saya ... (true=lulus, false=tidak lulus) = <strong>" + lulus + "</strong></p>");
+
 
 //  ========== Console ========== 
 document.writeln("<p><strong>Press F12 atau inspect/console</strong></p>");
