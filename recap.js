@@ -314,9 +314,56 @@ if (data) {
 } else {
     document.writeln("FALSE");
 }
+
 //  ========== Operator Logika di Non Boolean ========== 
+console.info("hello" || ""); // hello
+console.info("" || []); // []
+console.info("0" || "NOL"); // "0"
+console.info(0 || "NOL"); // "NOL"
+console.info(null || "NULL"); // "NULL"
+console.info(undefined || "UNDEFINED"); // UNDEFINED
+
+const person = {
+    firstName: "Fauzan",
+    lastName: "Ahmad"
+};
+
+const name = person.firstName || person.lastName;
+console.info(name);
+
+console.info("================AND===============");
+console.info("hello" && ""); // ""
+console.info("" && []); // ""
+console.info("0" && "NOL"); // NOL
+console.info(0 && "NOL"); // 0
+console.info(null && "NULL"); // null
+console.info(undefined && "UNDEFINED"); // undefined
+console.info("undefined" && "null"); // "null"
+
 //  ========== For Loop ========== 
+// kode perulangan dengan kondisi 
+let counter = 1;
+for (; counter <= 10;) {
+    document.writeln(`<p>Perulangan ke ${counter}</p>`);
+    counter++;
+}
+document.writeln(`<p>=======================</p>`);
+// kode perulangan dengan init statement 
+for (let counter = 1; counter <= 10;) {
+    document.writeln(`<p>Perulangan ke ${counter}</p>`);
+    counter++;
+}
+document.writeln(`<p>=======================</p>`);
+// kode perulangan dengan post statement 
+for (let counter = 1; counter <= 10; counter++) {
+    document.writeln(`<p>Perulangan ke ${counter}</p>`);
+}
 //  ========== While Loop ========== 
+let counter = 10;
+while (counter >= 1) {
+    document.writeln(`<p>Perulangan ke ${counter}</p>`);
+    counter--;
+}
 //  ==========  Do While Loop ========== 
 //  ========== Break dan Continue ========== 
 //  ========== Label ========== 

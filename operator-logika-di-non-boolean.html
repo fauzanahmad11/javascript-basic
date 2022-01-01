@@ -26,13 +26,29 @@
         ● Jika tidak ada satupun yang bernilai falsy, maka yang terakhir yang akan diambil
         */
 
-        console.info("hello" || ''); // hello
+        console.info("hello" || ""); // hello
         console.info("" || []); // []
-        console.info("0" || 'NOL'); // "0"
-        console.info(0 || 'NOL'); // 'NOL'
-        console.info(null || 'NULL'); // 'NULL'
-        console.info(undefined || 'UNDEFINED'); // UNDEFINED
+        console.info("0" || "NOL"); // "0"
+        console.info(0 || "NOL"); // "NOL"
+        console.info(null || "NULL"); // "NULL"
+        console.info(undefined || "UNDEFINED"); // UNDEFINED
 
+        const person = {
+            firstName: "Fauzan",
+            lastName: "Ahmad"
+        };
+
+        const name = person.firstName || person.lastName;
+        console.info(name);
+
+        console.info("================AND===============");
+        console.info("hello" && ""); // ""
+        console.info("" && []); // ""
+        console.info("0" && "NOL"); // NOL
+        console.info(0 && "NOL"); // 0
+        console.info(null && "NULL"); // null
+        console.info(undefined && "UNDEFINED"); // undefined
+        console.info("undefined" && "null"); // "null"
 
     </script>
 </body>
