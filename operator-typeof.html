@@ -17,39 +17,47 @@
         ● Karena JavaScript merupakan dynamic langauge, jadi kadang kita perlu mengecek tipe data sebuah
         value atau variable menggunakan operator typeof
         ● Hasil dari operator typeof adalah string tipe datanya
+
+        Type         |   Hasil Operator typeof
+        Undefined    |   “undefined”
+        Null         |   “object”
+        Boolean      |   “boolean”
+        Number       |   “number”
+        BitInt       |   “bigint”
+        String       |   “string”
+        Symbol       |   “symbol”
+        Function     |   “function”
+        Lainnya      |   “object”
         */
 
         let data = null;
         switch (typeof data) {
             case "number":
-                alert(`Tipe data yang kamu uji adalah ${typeof data}`);
+                document.write(`Tipe data yang kamu uji adalah number = ${typeof data}`);
                 break;
             case "string":
-                alert(`Tipe data yang kamu uji adalah ${typeof data}`);
+                document.write(`Tipe data yang kamu uji adalah string = ${typeof data}`);
                 break;
             case "boolean":
-                alert(`Tipe data yang kamu uji adalah ${typeof data}`);
+                document.write(`Tipe data yang kamu uji adalah boolean = ${typeof data}`);
                 break;
             case "null":
-                alert(`Tipe data yang kamu uji adalah ${typeof data}`);
+                document.write(`Tipe data yang kamu uji adalah null = ${typeof data}`);
                 break;
             case "undefined":
-                alert(`Tipe data yang kamu uji adalah ${typeof data}`);
+                document.write(`Tipe data yang kamu uji adalah undefined = ${typeof data}`);
                 break;
             case "symbol":
-                alert(`Tipe data yang kamu uji adalah ${typeof data}`);
+                document.write(`Tipe data yang kamu uji adalah symbol = ${typeof data}`);
                 break;
             case "function":
-                alert(`Tipe data yang kamu uji adalah ${typeof data}`);
+                document.write(`Tipe data yang kamu uji adalah function = ${typeof data}`);
                 break;
             case "bigint":
-                alert(`Tipe data yang kamu uji adalah ${typeof data}`);
-                break;
-            case "object":
-                alert(`Tipe data yang kamu uji adalah ${typeof data}`);
+                document.write(`Tipe data yang kamu uji adalah bigint = ${typeof data}`);
                 break;
             default:
-                alert(`Salah Pintu Bang`);
+                document.write(`Tipe data yang kamu uji adalah object = ${typeof data}`);
         }
     </script>
 </body>
