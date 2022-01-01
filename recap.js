@@ -250,7 +250,40 @@ if (masuk) {
 }
 
 //  ========== Undefined ========== 
+document.writeln("<p><strong>Press F12 to open the console</strong></p>");
+let name;
+if (name === undefined) {
+    console.info(`name undefined`);
+} else {
+    console.info(`name defined is ${name}`);
+}
+
+console.info("======Array Undefined Down Bellow======");
+const nameArray = ["Fauzan", "Ahmad", "Gokil"];
+if (nameArray[2] === undefined) {
+    console.info(`name undefined`);
+} else {
+    console.info(`name defined is ${nameArray[2]}`);
+}
+
+console.info("======Object Undefined Down Bellow======");
+let nameObject = {
+    name: "fauzan ahmad"
+};
+if (nameObject.name === undefined) {
+    console.info(`name undefined`);
+} else {
+    console.info(`name defined is ${nameObject.name}`);
+}
 //  ========== Null ========== 
+let name = null;
+if (name === undefined) {
+    alert("Hello Undefined");
+} else if (name === null) {
+    alert("Hello Null");
+} else {
+    alert(`Hello ${name}`);
+}
 //  ========== Switch Expression ========== 
 //  ========== Operator typeof ========== 
 //  ========== Operator in ========== 
