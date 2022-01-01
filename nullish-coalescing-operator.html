@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish Coalescing Operator</title>
+</head>
+
+<body>
+    <script>
+        /*
+        ## Nullish Coalescing Operator
+        ● Nullist value adalah null dan undefined
+        ● Nullist coalescing operator (??) adalah operator mirip dengan ternary operator, yang membedakan adalah pada kondisi, jika bernilai null atau undefined, baru value default nya diambil
+        */
+
+        const nilai = 75;
+        let ucapan;
+
+        document.writeln(`<p>=====Tanpa Menggunakan Ternary Operator=====</p>`);
+        if (nilai >= 75) {
+            ucapan = "Selamat Anda Lulus";
+        } else {
+            ucapan = "Silahkan coba lagi tahun depan di Next Master Chef !";
+        }
+
+        document.writeln(`<p>${ucapan}</p>`);
+
+        document.writeln(`<p>=====Dengan Menggunakan Ternary Operator=====</p>`);
+        ucapan = nilai >= 75 ? "Selamat Anda Lulus" : "Silahkan coba lagi tahun depan di Next Master Chef !";
+
+        document.writeln(`<p>${ucapan}</p>`);
+
+    </script>
+</body>
+
+</html>

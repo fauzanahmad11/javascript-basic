@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+</head>
+
+<body>
+    <script>
+        /*
+        ## Switch Statement
+        ● Kadang kita hanya butuh menggunakan kondisi sederhana di if statement, seperti hanya
+        menggunakan perbandingan ==
+        ● Switch adalah statement percabangan yang sama dengan if, namun lebih sederhana cara
+        pembuatannya
+        ● Kondisi di switch statement hanya untuk perbandingan ==
+
+        */
+        let nilai = prompt(`Selamat Kamu Telah Ujian. Masukan Nilai :`);
+        // alert(nilai);
+        switch (nilai) {
+            case "A":
+                alert("Wow anda lulus dengan baik !")
+                break;
+            case "B":
+            case "C":
+                alert("Anda lulus tuh")
+                break;
+            case "D":
+                alert("Anda tidak lulus, silahkan ikut semester pendek, hahaha")
+                break;
+            default:
+                alert("Mungkin anda salah jurusan !");
+        }
+    </script>
+</body>
+
+</html>

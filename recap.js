@@ -285,6 +285,22 @@ if (name === undefined) {
     alert(`Hello ${name}`);
 }
 //  ========== Switch Expression ========== 
+let nilai = prompt(`Selamat Kamu Telah Ujian. Masukan Nilai :`);
+// alert(nilai);
+switch (nilai) {
+    case "A":
+        alert("Wow anda lulus dengan baik !")
+        break;
+    case "B":
+    case "C":
+        alert("Anda lulus tuh")
+        break;
+    case "D":
+        alert("Anda tidak lulus, silahkan ikut semester pendek, hahaha")
+        break;
+    default:
+        alert("Mungkin anda salah jurusan !");
+}
 //  ========== Operator typeof ========== 
 //  ========== Operator in ========== 
 //  ========== Ternary Operator ========== 
