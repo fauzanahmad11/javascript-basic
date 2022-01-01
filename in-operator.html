@@ -23,12 +23,20 @@
 
         let person =
         {
-            fullName: "Fauzan",
+            firstName: "Fauzan",
             lastName: "Ahmad"
         };
-        let result = "fullName" in person;
+
+        if ("firstName" in person) {
+            alert(`Hello ${person.firstName}`);
+        } else {
+            alert(`Hello `);
+        }
+
+        let result = "firstName" in person;
         document.writeln(`<p>${result}</p>`);
         document.writeln(`<p>===========================</p>`);
+
 
         person = {
             lastName: undefined

@@ -16,22 +16,18 @@
         ● Nullist coalescing operator (??) adalah operator mirip dengan ternary operator, yang membedakan adalah pada kondisi, jika bernilai null atau undefined, baru value default nya diambil
         */
 
-        const nilai = 75;
-        let ucapan;
+        let parameter;
+        let data = parameter;
 
-        document.writeln(`<p>=====Tanpa Menggunakan Ternary Operator=====</p>`);
-        if (nilai >= 75) {
-            ucapan = "Selamat Anda Lulus";
-        } else {
-            ucapan = "Silahkan coba lagi tahun depan di Next Master Chef !";
+        document.writeln(`<p>=====Tanpa Nullish Coalescing Operator=====</p>`);
+        if (data === undefined || data === null) {
+            data = "nilai default";
         }
+        document.writeln(`<p>${data}</p>`);
 
-        document.writeln(`<p>${ucapan}</p>`);
-
-        document.writeln(`<p>=====Dengan Menggunakan Ternary Operator=====</p>`);
-        ucapan = nilai >= 75 ? "Selamat Anda Lulus" : "Silahkan coba lagi tahun depan di Next Master Chef !";
-
-        document.writeln(`<p>${ucapan}</p>`);
+        document.writeln(`<p>=====Dengan Nullish Coalescing Operator=====</p>`);
+        data = parameter ?? "Nilai Default";
+        document.writeln(`<p>${data}</p>`);
 
     </script>
 </body>

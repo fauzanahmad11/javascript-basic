@@ -307,6 +307,13 @@ switch (nilai) {
 //  ========== Nullish Coalescing Operator ========== 
 //  ========== Optional Chaining ========== 
 //  ========== Falsy dan Truthy ========== 
+document.writeln(`<p>=====Tanpa Oprional Chaining=====</p>`);
+let data = undefined;
+if (data) {
+    document.writeln("TRUE");
+} else {
+    document.writeln("FALSE");
+}
 //  ========== Operator Logika di Non Boolean ========== 
 //  ========== For Loop ========== 
 //  ========== While Loop ========== 
