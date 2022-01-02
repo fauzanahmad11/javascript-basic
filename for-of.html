@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Label</title>
+    <title>For Of</title>
 </head>
 
 <body>
@@ -17,26 +17,19 @@
 
         */
 
-        // kode : label
-        loopi:
-        for (let i = 0; i < 100; i++) {
-            loopj:
-            for (let j = 0; j < 10; j++) {
-                console.log(`${i}-${j}`);
-            }
+        document.writeln(`<p>==========Array Tanpa For Of==========</p>`);
+        // Kode : For Of di Array
+        const names = ["Fauzan Ahmad", "Yono Kurniawan", "Wahyu Inna"];
+        for (const name of names) {
+            document.writeln(`<p>${name}</p>`);
         }
 
-        // kode : Continue atau break di Label 
-        loopa: for (let a = 0; a < 10; a++) {
-            loopb:
-            for (let b = 0; b < 100; b++) {
-                if (b > 10) {
-                    continue loopa;
-                }
-                document.writeln(`<p>${a}-${b}</p>`)
-            }
+        document.writeln(`<p>==========String Dengan For Of==========</p>`);
+        // Kode : For Of di String
+        const name = "Fauzan Ahmad";
+        for (const char of name) {
+            document.writeln(`<p>${char}</p>`);
         }
-
     </script>
 </body>
 
