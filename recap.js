@@ -556,6 +556,20 @@ for (const index in names) {
 }
 
 //  ========== For Of ==========
+document.writeln(`<p>==========Array Dengan For Of==========</p>`);
+// Kode : For Of di Array
+const names = ["Fauzan Ahmad", "Yono Kurniawan", "Wahyu Inna"];
+for (const name of names) {
+    document.writeln(`<p>${name}</p>`);
+}
+
+document.writeln(`<p>==========String Dengan For Of==========</p>`);
+// Kode : For Of di String
+const name = "Fauzan Ahmad";
+for (const char of name) {
+    document.writeln(`<p>${char}</p>`);
+}
+
 //  ========== With Statement ==========
 //  ========== Function ==========
 //  ========== Function Parameter ==========
