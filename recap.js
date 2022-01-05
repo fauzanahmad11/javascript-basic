@@ -516,7 +516,45 @@ for (let i = 1; i <= 100; i++) {
 }
 
 //  ========== Label ==========
+// kode : label
+loopi:
+    for (let i = 0; i < 100; i++) {
+        loopj: for (let j = 0; j < 10; j++) {
+            console.log(`${i}-${j}`);
+        }
+    }
+
+// kode : Continue atau break di Label 
+loopa:
+    for (let a = 0; a < 10; a++) {
+        loopb: for (let b = 0; b < 100; b++) {
+            if (b > 10) {
+                continue loopa;
+            }
+            document.writeln(`<p>${a}-${b}</p>`)
+        }
+    }
+
 //  ========== For In ==========
+// Kode: For In di Object
+const person = {
+    firstName: "Fauzan",
+    middleName: "Ahmad",
+    lastName: "M",
+};
+
+document.writeln(`<p>=====For In di Object=====</p>`);
+for (const property in person) {
+    document.writeln(`<p>Property ${property} : ${person[property]}</p>`);
+}
+
+// Kode : For In di Array
+document.writeln(`<p>=====For In di Array=====</p>`);
+const names = ["Fauzan", "Tato", "Yono"];
+for (const index in names) {
+    document.writeln(`<p>Index ${index} : ${names[index]}</p>`);
+}
+
 //  ========== For Of ==========
 //  ========== With Statement ==========
 //  ========== Function ==========

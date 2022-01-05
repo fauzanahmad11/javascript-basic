@@ -30,14 +30,7 @@
 </head>
 
 <body>
-    <button id="openConsole">open console</button>
     <script>
-        document.querySelector('#openConsole').addEventListener('click', () => {
-            var event = document.createEvent('Event');
-            event.initEvent('build', true, true);
-            event.keyCode = 123; // F12 key code
-            document.dispatchEvent(event);
-        });
         /*
         ## With Statement
         ● With statement merupakan fitur yang digunakan untuk menurunkan sebuah scope data

@@ -24,13 +24,13 @@
             lastName: "M",
         };
 
-        document.writeln(`<p>Tanpa For In</p>`);
+        document.writeln(`<p>=====For In di Object=====</p>`);
         for (const property in person) {
             document.writeln(`<p>Property ${property} : ${person[property]}</p>`);
         }
 
         // Kode : For In di Array
-        document.writeln(`<p>Dengan For In</p>`);
+        document.writeln(`<p>=====For In di Array=====</p>`);
         const names = ["Fauzan", "Tato", "Yono"];
         for (const index in names) {
             document.writeln(`<p>Index ${index} : ${names[index]}</p>`);
