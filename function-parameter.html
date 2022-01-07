@@ -30,14 +30,7 @@
 </head>
 
 <body>
-    <button id="openConsole">open console</button>
     <script>
-        document.querySelector('#openConsole').addEventListener('click', () => {
-            var event = document.createEvent('Event');
-            event.initEvent('build', true, true);
-            event.keyCode = 123; // F12 key code
-            document.dispatchEvent(event);
-        });
         /*
         ## Function Parameter
         ● Kita bisa mengirim informasi ke function yang ingin kita panggil
@@ -49,13 +42,12 @@
         */
 
         // Kode : Tanpa With Statement
-        // document.writeln(`<div>Press F12 or klik inspect and console</div>`);
-        function sayHelloWorld() {
-            document.writeln(`<p>Hello World</p>`);
+        document.writeln(`<div>Press F12 or klik inspect and console <br> to see the result</div>`);
+        function sayHello(firstName, lastName) {
+            console.log(`Hello ${firstName} ${lastName}`);
         }
 
-        sayHelloWorld();
-        sayHelloWorld();
+        sayHello("Fauzan", "Racing");
 
     </script>
 </body>
