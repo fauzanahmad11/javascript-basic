@@ -32,21 +32,21 @@
 <body>
     <script>
         /*
-        ## Optional Parameter
-        ● Secara default, parameter di function itu optional
-        ● Artinya kita tidak wajib mengisi value nya ketika memanggil function
-        ● Jika tidak ada value yang kita kirim ke parameter ketika memanggil function, maka secara otomatis parameter tersebut bernilai undefined
+        ## Default Parameter
+        ● Sekarang kita tahu bahwa parameter itu optional, artinya kita bisa tidak memberi value terhadap parameter
+        ● Parameter juga bisa kita beri default value, artinya jika ketika kita tidak mengirim data ke parameter atau kita mengirim data undefined, maka secara otomatis parameter akan diisi oleh default value
         */
 
-        // Kode : Kode optional parameter
+        // Kode : Default Parameter
         document.writeln(`<div>Press F12 or klik inspect and console <br> to see the result</div>`);
-        function sayHello(firstName, middleName, lastName) {
-            console.log(firstName);
-            console.log(middleName);
-            console.log(lastName);
+        function register(name, gender = "UNKNOWN") {
+            console.log(nama);
+            console.log(gender);
         }
 
-        sayHello("Fauzan");
+        register("Fauzan", "LAKIK");
+        register("Budi");
+        register("Joko", undefined);
     </script>
 </body>
 
