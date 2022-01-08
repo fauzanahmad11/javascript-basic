@@ -571,6 +571,43 @@ for (const char of name) {
 }
 
 //  ========== With Statement ==========
+// Kode : Tanpa With Statement
+document.writeln(`<div>Press F12 or klik inspect and console</div>`);
+const person = {
+    firstName: "Fauzan",
+    lastName: "Ahmad",
+};
+
+console.log(`Tanpa With Statement`);
+console.log(person.firstName);
+console.log(person.lastName);
+
+// Kode : Dengan With Statement
+const human = {
+    firstName: "Fauzan",
+    lastName: "Ahmad",
+};
+
+console.log(`Dengan With Statement`);
+with(human) {
+    console.log(firstName);
+    console.log(lastName);
+}
+
+// Kode : Ambigu di With Statement
+console.log(`Ambigu di With Statement`);
+const humanis = {
+    firstName: "Fatimah",
+    lastName: "Ahmad",
+};
+
+const firstName = "Bundo";
+const lastName = "Nando";
+
+with(humanis) {
+    console.log(firstName); // Niatnya ingin Bundo
+    console.log(lastName); // Niatnya ingin Nando
+}
 //  ========== Function ==========
 //  ========== Function Parameter ==========
 //  ========== Function Return Value ==========
