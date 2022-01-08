@@ -670,6 +670,17 @@ function isContains(array, searchValue) {
 console.log(isContains([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
 
 //  ========== Optional Parameter ==========
+// Kode : Kode optional parameter
+document.writeln(`<div>Press F12 or klik inspect and console <br> to see the result</div>`);
+
+function sayHello(firstName, middleName, lastName) {
+    console.log(firstName);
+    console.log(middleName);
+    console.log(lastName);
+}
+
+sayHello("Fauzan");
+
 //  ========== Default Parameter ==========
 //  ========== Rest Parameter ==========
 //  ========== Function Sebagai Value ==========

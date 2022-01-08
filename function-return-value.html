@@ -41,13 +41,18 @@
         */
 
         // Kode : Function Return Value
-        document.writeln(`<div>Press F12 or klik inspect and console <br> to see the result</div>`);
+        // document.writeln(`<div>Press F12 or klik inspect and console <br> to see the result</div>`);
         function sayHello(firstName, lastName) {
-            return `Hello ${firstName} ${lastName}`;
+            return `Hello ${firstName} ${lastName} ${add('anjaz')}`;
         }
 
-        console.log("====Return Value Satu====");
-        console.log(sayHello("Fauzan", "Racing"));
+        document.writeln("<p>====Return Value Satu====</p>");
+        document.writeln(sayHello("Fauzan", "Racing"));
+
+
+        function add(lastName) {
+            return lastName;
+        }
 
         // Kode : Function Return Value Lebih Dari Satu 
         function getFinalScoreValue(value) {
@@ -63,22 +68,25 @@
                 return "E";
             }
         }
-        console.log("====Return Value Lebih Dari Satu====");
+        document.writeln("<p>====Return Value Lebih Dari Satu====</p>");
         let inputNilai = 81;
         let output = getFinalScoreValue(inputNilai);
-        console.log(output);
+        document.writeln(`<p>${output}</p>`);
 
 
         // Kode : Menghentikan Eksekusi dengan Return
+        document.writeln("<p>====Menghentikan Eksekusi dengan Return====</p>");
         function isContains(array, searchValue) {
             for (const element of array) {
+                console.log(`Iterasi element ${element}`);
                 if (element === searchValue) {
-                    return true;
+                    return `Berhenti pada data ke-${element} = ${true}`;
                 }
             }
-            return false;
+            return `Data ke-${searchValue} tidak ditemukan = ${false}`;
         }
-        console.log(isContains([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
+        document.writeln(`<p>Cek console untuk melihat detail iterasi. di iterasi berapakah data ditemukan</p>`);
+        document.writeln(`<p>${isContains([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 10)}</p>`);
 
     </script>
 </body>
