@@ -825,6 +825,41 @@ function firstNested() {
 firstNested();
 
 //  ========== Recursive Function ==========
+// =====Kode : Factorial Loop=====
+document.writeln(`<p>=====Factorial dengan Loop=====</p>`);
+
+function factorial(value) {
+    let result = 1;
+    for (let i = 1; i <= value; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+let factorialValue = factorial(2);
+document.writeln(`<p>${factorialValue}</p>`);
+
+// =====Kode : Factorial Recursive=====
+document.writeln(`<p>=====Factorial dengan Function Recursive=====</p>`);
+
+function factorialRecursive(value) {
+    if (value === 1) {
+        return 1;
+    } else {
+        return value * factorialRecursive(value - 1);
+    }
+}
+factorialValue = factorialRecursive(20);
+/*
+    Cara kerja Function Recursive
+    5 * factorialRecursive(5 - 1)
+    5 * 4 * factorialRecursive(4 - 1)
+    5 * 4 * 3 * factorialRecursive(3 - 1)
+    5 * 4 * 3 * 2 * factorialRecursive(2 - 1)
+    5 * 4 * 3 * 2 * 1
+*/
+document.writeln(`<p>${factorialValue}</p>`);
+
 //  ========== Function GEnerator ==========
 //  ========== Recursive Function ==========
 //  ========== Function GEnerator ==========
