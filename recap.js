@@ -618,6 +618,15 @@ sayHelloWorld();
 sayHelloWorld();
 
 //  ========== Function Parameter ==========
+// Kode : Tanpa With Statement
+document.writeln(`<div>Press F12 or klik inspect and console <br> to see the result</div>`);
+
+function sayHello(firstName, lastName) {
+    console.log(`Hello ${firstName} ${lastName}`);
+}
+
+sayHello("Fauzan", "Racing");
+
 //  ========== Function Return Value ==========
 //  ========== Optional Parameter ==========
 //  ========== Default Parameter ==========
