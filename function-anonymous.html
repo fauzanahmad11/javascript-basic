@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Anonymous</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 2rem;
+        }
+
+        p {
+            padding: .5rem 0;
+        }
+
+        div {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(0, 195, 255);
+            font-weight: 800;
+            font-size: 2rem;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #0e0e0e;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        /*
+        ## Anonymous Function
+        ● Sebelumnya kita selalu membuat function dengan nama
+        ● Kita juga bisa membuat function tanpa nama function, atau istilahnya adalah anonymous function
+        ● Kita bisa buat anonymous function dalam sebuah variable atau bisa juga kita buat ketika mengisi parameter
+        */
+
+        // Kode : Anonymous Function di Variable
+        let say = function (name) {
+            console.log(`Hello ${name}`);
+        }
+
+        say("Fauzan");
+
+        // Kode : Anonymous Function di Parameter
+        function giveMeName(callback) {
+            callback("Fauzan");
+        }
+
+        giveMeName(function (name) {
+            console.log(`Hello ${name}`);
+        });
+    </script>
+</body>
+
+</html>

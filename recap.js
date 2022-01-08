@@ -695,6 +695,37 @@ register("Budi");
 register("Joko", undefined);
 
 //  ========== Rest Parameter ==========
+// Kode : Rest Parameter
+function sum(name, ...data) {
+    let total = 0;
+    for (const item of data) {
+        total += item;
+    }
+    document.writeln(`<p>Total ${name} is ${total}</p>`);
+}
+
+
+sum("Mango", 50, 40, 3);
+sum("Coconut", 50, 40, 3);
+sum("Papaya", 50, 40, 3);
+
+// Kode : Spread Syntax
+const values = [10, 25, 34, 21, 22];
+sum("Test", ...values);
+
+//  Kode : Arguments Object
+document.writeln(`<p>=====Arguments Object (Old Sum)=====</p>`);
+
+function oldSum() {
+    let total = 0;
+    for (const item of arguments) {
+        total += item;
+    }
+    document.writeln(`<p>Total is ${total}</p>`);
+}
+
+oldSum(1, 3, 2, 5, 2, 3);
+
 //  ========== Function Sebagai Value ==========
 //  ========== Anonymous Function ==========
 //  ========== Function dalam Function ==========
