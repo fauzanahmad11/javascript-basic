@@ -682,6 +682,18 @@ function sayHello(firstName, middleName, lastName) {
 sayHello("Fauzan");
 
 //  ========== Default Parameter ==========
+// Kode : Default Parameter
+document.writeln(`<div>Press F12 or klik inspect and console <br> to see the result</div>`);
+
+function register(name, gender = "UNKNOWN") {
+    console.log(nama);
+    console.log(gender);
+}
+
+register("Fauzan", "LAKIK");
+register("Budi");
+register("Joko", undefined);
+
 //  ========== Rest Parameter ==========
 //  ========== Function Sebagai Value ==========
 //  ========== Anonymous Function ==========
