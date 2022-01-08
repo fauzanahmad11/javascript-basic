@@ -608,7 +608,15 @@ with(humanis) {
     console.log(firstName); // Niatnya ingin Bundo
     console.log(lastName); // Niatnya ingin Nando
 }
+
 //  ========== Function ==========
+function sayHelloWorld() {
+    document.writeln(`<p>Hello World</p>`);
+}
+
+sayHelloWorld();
+sayHelloWorld();
+
 //  ========== Function Parameter ==========
 //  ========== Function Return Value ==========
 //  ========== Optional Parameter ==========
