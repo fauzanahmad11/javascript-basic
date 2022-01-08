@@ -50,14 +50,14 @@
         // Kode : Function dalam Function
         function outer() {
             function inner() {
-                console.log("Inner");
+                document.writeln(`<p>Inner<p>`);
             }
 
             inner();
             inner();
         }
         outer();
-        inner();// ERROR can not access inner function
+        inner(); // ERROR can not access inner function (inner is not defined)
     </script>
 </body>
 

@@ -47,19 +47,23 @@
         ● Data di global scope bisa diakses dari local scope, namun data di local scope hanya bisa di akses di local scope tersebut atau di scope local dibawahnya (dalam kasus function dalam function)
         */
 
-        // Kode : Global Scope
+        // =====Kode : Global Scope=====
         document.writeln(`<p>=====Global Scope=====</p>`);
+
+        // Variable counter berada di Global Scope
         let counter = 0;
+
+        // Function hitMe berada di Global Scope
         function hitMe() {
-            // local scope function hitMe
-            counter++;
+            // blok functionnya berada di local scope function hitMe
+            counter++; // We can access
         }
         hitMe();
         hitMe();
 
-        console.log('counter');
+        document.writeln(`<p>${counter}</p>`);
 
-        // Kode : Local Scope
+        // =====Kode : Local Scope=====
         document.writeln(`<p>=====Local Scope=====</p>`);
         function first() {
             let firstVariable = "First";
@@ -71,20 +75,20 @@
         first();
         secound();
 
-        console.log(firstVariable()); // can not access local scope
-        console.log(secoundVariable()); // can not access local scope
+        //console.log(firstVariable); // ERROR can not access local scope
+        //console.log(secoundVariable); // ERROR can not access local scope
 
-        // Kode : Nested Function Scope
+        // =====Kode : Nested Function Scope=====
         document.writeln(`<p>=====Nested Function Scope=====</p>`);
-        function first() {
+        function firstNested() {
             let firstVariable = "First";
 
-            function secound() {
-                let secoundVariable = "Secound";
+            function secoundNested() {
+                document.writeln(`<p>${firstVariable}</p>`);
             }
-            secound();
+            secoundNested();
         }
-        first();
+        firstNested();
 
 
     </script>

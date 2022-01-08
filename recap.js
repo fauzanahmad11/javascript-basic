@@ -727,9 +727,103 @@ function oldSum() {
 oldSum(1, 3, 2, 5, 2, 3);
 
 //  ========== Function Sebagai Value ==========
+// Kode : Function di Variable
+function sayHello(name) {
+    document.writeln(`<p>Hello ${name}</p>`);
+}
+
+document.writeln(`<p>=====Function di Variable=====</p>`);
+let say = sayHello;
+sayHello("Fauzan");
+say("Tato");
+
+// Kode : Function di Parameter
+document.writeln(`<p>=====Function di Parameter=====</p>`);
+
+function giveMeName(callback) {
+    callback("Fauzan Ahmad"); // sayHello("Fauzan Ahmad");
+}
+giveMeName(sayHello);
+giveMeName(say); // giveMeName(sayHello)
+
 //  ========== Anonymous Function ==========
+// Kode : Anonymous Function di Variable
+let say = function (name) {
+    console.log(`Hello ${name}`);
+    document.writeln(`<p>Hello ${name}</p>`);
+}
+
+say("Fauzan");
+
+// Kode : Anonymous Function di Parameter
+function giveMeName(callback, age) {
+    callback("Fauzan", age);
+}
+
+giveMeName(function (name, age) {
+    document.writeln(`<p>Hello ${name} I'm ${age} years old</p>`);
+}, 20);
+
 //  ========== Function dalam Function ==========
+// Kode : Function dalam Function
+function outer() {
+    function inner() {
+        document.writeln(`<p>Inner<p>`);
+    }
+
+    inner();
+    inner();
+}
+outer();
+inner(); // ERROR can not access inner function (inner is not defined)
+
 //  ========== Scope ==========
+// =====Kode : Global Scope=====
+document.writeln(`<p>=====Global Scope=====</p>`);
+
+// Variable counter berada di Global Scope
+let counter = 0;
+
+// Function hitMe berada di Global Scope
+function hitMe() {
+    // blok functionnya berada di local scope function hitMe
+    counter++; // We can access
+}
+hitMe();
+hitMe();
+
+document.writeln(`<p>${counter}</p>`);
+
+// =====Kode : Local Scope=====
+document.writeln(`<p>=====Local Scope=====</p>`);
+
+function first() {
+    let firstVariable = "First";
+}
+
+function secound() {
+    let secoundVariable = "Secound";
+}
+
+first();
+secound();
+
+//console.log(firstVariable); // ERROR can not access local scope
+//console.log(secoundVariable); // ERROR can not access local scope
+
+// =====Kode : Nested Function Scope=====
+document.writeln(`<p>=====Nested Function Scope=====</p>`);
+
+function firstNested() {
+    let firstVariable = "First";
+
+    function secoundNested() {
+        document.writeln(`<p>${firstVariable}</p>`);
+    }
+    secoundNested();
+}
+firstNested();
+
 //  ========== Recursive Function ==========
 //  ========== Function GEnerator ==========
 //  ========== Recursive Function ==========

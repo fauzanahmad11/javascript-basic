@@ -47,7 +47,7 @@
 
         // Kode : Function di Variable
         function sayHello(name) {
-            console.log(`Hello ${name}`);
+            document.writeln(`<p>Hello ${name}</p>`);
         }
 
         document.writeln(`<p>=====Function di Variable=====</p>`);
@@ -58,10 +58,10 @@
         // Kode : Function di Parameter
         document.writeln(`<p>=====Function di Parameter=====</p>`);
         function giveMeName(callback) {
-            callback("Fauzan Ahmad");
+            callback("Fauzan Ahmad"); // sayHello("Fauzan Ahmad");
         }
         giveMeName(sayHello);
-        giveMeName(say);
+        giveMeName(say);// giveMeName(sayHello)
     </script>
 </body>
 

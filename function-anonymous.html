@@ -20,20 +20,6 @@
         p {
             padding: .5rem 0;
         }
-
-        div {
-            width: 100%;
-            height: 100vh;
-            background-color: rgb(0, 195, 255);
-            font-weight: 800;
-            font-size: 2rem;
-            font-family: sans-serif;
-            text-transform: uppercase;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #0e0e0e;
-        }
     </style>
 </head>
 
@@ -49,18 +35,19 @@
         // Kode : Anonymous Function di Variable
         let say = function (name) {
             console.log(`Hello ${name}`);
+            document.writeln(`<p>Hello ${name}</p>`);
         }
 
         say("Fauzan");
 
         // Kode : Anonymous Function di Parameter
-        function giveMeName(callback) {
-            callback("Fauzan");
+        function giveMeName(callback, age) {
+            callback("Fauzan", age);
         }
 
-        giveMeName(function (name) {
-            console.log(`Hello ${name}`);
-        });
+        giveMeName(function (name, age) {
+            document.writeln(`<p>Hello ${name} I'm ${age} years old</p>`);
+        }, 20);
     </script>
 </body>
 
