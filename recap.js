@@ -628,6 +628,47 @@ function sayHello(firstName, lastName) {
 sayHello("Fauzan", "Racing");
 
 //  ========== Function Return Value ==========
+// Kode : Function Return Value
+document.writeln(`<div>Press F12 or klik inspect and console <br> to see the result</div>`);
+
+function sayHello(firstName, lastName) {
+    return `Hello ${firstName} ${lastName}`;
+}
+
+console.log("====Return Value Satu====");
+console.log(sayHello("Fauzan", "Racing"));
+
+// Kode : Function Return Value Lebih Dari Satu 
+function getFinalScoreValue(value) {
+    if (value > 90) {
+        return "A";
+    } else if (value > 80) {
+        return "B";
+    } else if (value > 70) {
+        return "C";
+    } else if (value > 60) {
+        return "D";
+    } else {
+        return "E";
+    }
+}
+console.log("====Return Value Lebih Dari Satu====");
+let inputNilai = 81;
+let output = getFinalScoreValue(inputNilai);
+console.log(output);
+
+
+// Kode : Menghentikan Eksekusi dengan Return
+function isContains(array, searchValue) {
+    for (const element of array) {
+        if (element === searchValue) {
+            return true;
+        }
+    }
+    return false;
+}
+console.log(isContains([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
+
 //  ========== Optional Parameter ==========
 //  ========== Default Parameter ==========
 //  ========== Rest Parameter ==========
