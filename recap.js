@@ -861,6 +861,56 @@ factorialValue = factorialRecursive(20);
 document.writeln(`<p>${factorialValue}</p>`);
 
 //  ========== Function GEnerator ==========
+// =====Kode : Function Generator Sederhana=====
+document.writeln(`<p>=====Function Generator Sederhana=====</p>`);
+
+function* createNames() {
+    yield "Fauzan";
+    yield "dopping";
+    yield "Tato";
+}
+
+for (const name of createNames()) {
+    document.writeln(`<p>${name}</p>`);
+}
+
+// =====Kode : Function Generator Mulai Tidak Sederhana (Lazy Load)=====
+document.writeln(`<p>=====Function Generator Mulai Tidak Sederhana (Lazy Load)=====</p>`);
+
+function* createOddNumbers(num) {
+    for (let i = 1; i <= num; i++) {
+        if (i % 2 === 1) {
+            document.writeln(`<p>${`Yield ${i}`}</p>`);
+            yield i;
+        }
+    }
+}
+const numbers = createOddNumbers(20);
+// for (const number of numbers) {
+//     document.writeln(`<p>${number}</p>`);
+// }
+// Iterasi Dengan Next().value; bawaan function Generator
+document.writeln(`<p>${numbers.next().value}</p>`);
+document.writeln(`<p>${numbers.next().value}</p>`);
+
+document.writeln(`<p>=====Function Generator Mulai Tidak Sederhana (Eager Load)=====</p>`);
+
+function createOddNumbersArray(num) {
+    const result = [];
+    for (let i = 1; i <= num; i++) {
+        if (i % 2 === 1) {
+            document.writeln(`<p>${`Yield ${i}`}</p>`);
+            result.push(i);
+        }
+    }
+    return result;
+}
+const numbersArray = createOddNumbersArray(20);
+console.log(numbersArray)
+for (const number of numbersArray) {
+    document.writeln(`<p>${number}</p>`);
+}
+
 //  ========== Recursive Function ==========
 //  ========== Function GEnerator ==========
 //  ========== Arrow Function ==========
