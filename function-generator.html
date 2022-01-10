@@ -45,6 +45,13 @@
         ● Generator adalah data yang bisa di interasi seperti Array
         ● Untuk membuat function generator, kita perlu menggunakan tanda * (bintang) setelah kata function
         ● Dan untuk mengembalikan data di tiap iterasi, kita bisa gunakan kata kunci yield diikuti datanya
+
+        ## Lazy Evaluation
+        ● Generator itu sifatnya lazy/berbeda dengan array yang EAGER
+        ● Jadi artinya jika data belum kita ambil dari generator, maka yield selanjutnya tidak akan di eksekusi
+
+        ## keuntungan lazy load
+        menghemat proses komputasi karna kita tidak perlu mengeksekusi semuanya dan hemat data karna yang dibutuhkan saja yang diambil, kalo gak dibutuhkan ya gak usah diambil datanya
         */
 
         // =====Kode : Factorial Loop=====
@@ -58,16 +65,38 @@
         for (const name of createNames()) {
             document.writeln(`<p>${name}</p>`);
         }
-        document.writeln(`<p>=====Function Generator Mulai Tidak Sederhana=====</p>`);
-        function createOddNumbers(num) {
+
+        document.writeln(`<p>=====Function Generator Mulai Tidak Sederhana (Lazy Load)=====</p>`);
+        function* createOddNumbers(num) {
             for (let i = 1; i <= num; i++) {
                 if (i % 2 === 1) {
+                    document.writeln(`<p>${`Yield ${i}`}</p>`);
                     yield i;
                 }
             }
         }
-        let numbers = createOddNumbers(20);
-        for (const number of numbers) {
+        const numbers = createOddNumbers(20);
+        // for (const number of numbers) {
+        //     document.writeln(`<p>${number}</p>`);
+        // }
+        // Iterasi Dengan Next().value; bawaan function Generator
+        document.writeln(`<p>${numbers.next().value}</p>`);
+        document.writeln(`<p>${numbers.next().value}</p>`);
+
+        document.writeln(`<p>=====Function Generator Mulai Tidak Sederhana (Eager Load)=====</p>`);
+        function createOddNumbersArray(num) {
+            const result = [];
+            for (let i = 1; i <= num; i++) {
+                if (i % 2 === 1) {
+                    document.writeln(`<p>${`Yield ${i}`}</p>`);
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+        const numbersArray = createOddNumbersArray(20);
+        console.log(numbersArray)
+        for (const number of numbersArray) {
             document.writeln(`<p>${number}</p>`);
         }
     </script>
