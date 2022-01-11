@@ -57,8 +57,19 @@
         };
         person.sayHello("Budi");
 
-        // =====Kode : Arrow Function di Object Method=====
-        document.writeln(`<p>=====Arrow Function di Object Method=====</p>`);
+        // =====Kode : this di Arrow Function Object=====
+        document.writeln(`<p>=====this di Arrow Function Object=====</p>`);
+        const personTwo = {
+            name: "Fauzan",
+            sayHelloTwo: (name) => {
+                console.info(this);
+                console.info(`Hello ${name}, My name is ${this.name}`);
+            }
+        };
+        personTwo.sayHelloTwo("Budi");
+
+        // =====Kode : this di Arrow Function Object=====
+        document.writeln(`<p>=====this di Arrow Function Object=====</p>`);
         const personTwo = {
             name: "Fauzan",
             sayHelloTwo: (name) => {

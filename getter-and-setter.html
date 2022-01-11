@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter dan Setter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 2rem;
+        }
+
+        p {
+            padding: .5rem 0;
+        }
+
+        div {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(0, 195, 255);
+            font-weight: 800;
+            font-size: 2rem;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #0e0e0e;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        /*
+        ## Getter dan Setter
+        ● Getter dan Setter adalah kemampuan membuat function yang berbeda untuk mengambil data (Getter) dan mengubah data (Setter) pada sebuah property di Object
+        ● Dengan menggunakan Getter dan Setter, kita bisa melakukan hal apapun dalam function sebelum sebuah property di akses atau diubah, misal menambah validasi dan lain-lain
+        */
+
+        // =====Kode : Getter=====
+        document.writeln(`<p>=====Getter=====</p>`);
+        const person = {
+            firstName: "Fauzan",
+            lastName: "Ahmad",
+            get fullName() {
+                return `${this.firstName} ${this.lastName}`;
+            },
+            set fullName(val) {
+                const array = val.split(" ");
+                this.firstName = array[0];
+                this.lastName = array[1];
+            }
+        }
+        // otomatis memanggil get fullName()
+        document.writeln(`<p>${person.fullName}</p>`);
+
+        // =====Kode : Setter=====
+        document.writeln(`<p>=====Setter=====</p>`);
+        person.fullName = "Antonio DeLuza";
+        document.writeln(`<p>${person.firstName}</p>`);
+        document.writeln(`<p>${person.lastName}</p>`);
+
+    </script>
+</body>
+
+</html>

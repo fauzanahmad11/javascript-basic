@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masalah Variable var</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 2rem;
+        }
+
+        p {
+            padding: .5rem 0;
+        }
+
+        div {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(0, 195, 255);
+            font-weight: 800;
+            font-size: 2rem;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #0e0e0e;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        /*
+        ## Masalah Variable var
+        ● Sebelumnya sudah dijelaskan bahwa penggunaan var sudah tidak direkomendasikan lagi, dan diganti dengan let
+        ● Pertanyaannya kenapa?
+        ● Alasan var tidak direkomendasikan digunakan lagi adalah, karena var tidak memiliki block scope, artinya dia tidak mengikat ke local scope yang sebelumnya sudah kita bahas
+        ● Karena masalah ini, var bisa tidak terprediksi
+        ● Kita akan buat contoh penggunaan var dan let
+        */
+
+        // =====Kode : Menggunakan let=====
+        document.writeln(`<p>=====Menggunakan let=====</p>`);
+        let i = 20;
+        for (let i = 0; i < 10; i++) {
+            document.writeln(`<p>Local : ${i}</p>`);
+        }
+        document.writeln(`<p>Global : ${i}</p>`);
+
+        // =====Kode : Menggunakan var=====
+        document.writeln(`<p>=====Menggunakan var=====</p>`);
+        var j = 20;
+        for (var j = 0; j < 10; j++) {
+            document.writeln(`<p>Local : ${j}</p>`);
+        }
+        document.writeln(`<p>Global : ${j}</p>`);
+
+    </script>
+</body>
+
+</html>

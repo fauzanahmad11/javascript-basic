@@ -99,8 +99,8 @@
 
         // =====Kode : Arrow Function Sebagai Parameter=====
         document.writeln(`<p>=====Arrow Function Sebagai Parameter=====</p>`);
-        function giveMeName(callback) {
-            callback("Fauzan Ahmad");
+        function giveMeName(callbacks) {
+            callbacks("Fauzan Ahmad");
         }
         giveMeName((name) => document.writeln(`<p>Hello ${name}</p>`));
     </script>

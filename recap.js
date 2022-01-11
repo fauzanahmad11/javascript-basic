@@ -911,9 +911,44 @@ for (const number of numbersArray) {
     document.writeln(`<p>${number}</p>`);
 }
 
-//  ========== Recursive Function ==========
-//  ========== Function GEnerator ==========
 //  ========== Arrow Function ==========
+// =====Kode : Membuat Arrow Function=====
+document.writeln(`<p>=====Membuat Arrow Function=====</p>`);
+const sayHello = (name) => {
+    document.writeln(`<p>Hello ${name}</p>`);
+    let i = 1;
+    while (true) {
+        document.writeln(`<p>Hello ${name}</p>`);
+        i++;
+        if (i > 10) {
+            break;
+        }
+    }
+}
+sayHello("Fauzan");
+
+// =====Kode : Arrow Function Tanpa Block=====
+document.writeln(`<p>=====Arrow Function Tanpa Block=====</p>`);
+const sayHelloWB = (name) => document.writeln(`<p>Hello ${name}</p>`);
+sayHelloWB("Fauzan Juga")
+
+// =====Kode : Arrow Function Return Value=====
+document.writeln(`<p>=====Arrow Function Return Value=====</p>`);
+const sum = (a, b) => a + b;
+document.writeln(`<p>${sum(50, 1)}</p>`)
+
+// =====Kode : Arrow Function Tanpa Kurung Parameter=====
+document.writeln(`<p>=====Arrow Function Tanpa Kurung Parameter=====</p>`);
+const sayStory = text => document.writeln(`<p>Lo keren bisa sampai sini bung ${text}</p>`);
+sayStory("Fauzan");
+
+// =====Kode : Arrow Function Sebagai Parameter=====
+document.writeln(`<p>=====Arrow Function Sebagai Parameter=====</p>`);
+
+function giveMeName(callbacks) {
+    callbacks("Fauzan Ahmad");
+}
+giveMeName((name) => document.writeln(`<p>Hello ${name}</p>`));
 //  ========== Closure ==========
 //  ========== Object Method ==========
 //  ========== Kata Kunci this ==========
