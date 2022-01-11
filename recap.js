@@ -975,6 +975,27 @@ document.writeln(`<p>${addTwo(10)}</p>`);
 document.writeln(`<p>${addTwo(20)}</p>`);
 
 //  ========== Object Method ==========
+// =====Kode : Membuat Object dengan Method=====
+document.writeln(`<p>=====Membuat Object dengan Method=====</p>`);
+const person = {
+    name: "Fauzan",
+    sayHello: function (name) {
+        document.writeln(`<p>Hellow ${name} ! Whatsapp !!</p>`);
+    }
+}
+person.sayHello("Fauzan Ahmad");
+console.table(person);
+
+// =====Kode : Menambah Method ke Object=====
+document.writeln(`<p>=====Menambah Method ke Object=====</p>`);
+const personTwo = {
+    name: "Fauzan"
+}
+personTwo.sayHelloToPerson = function (name) {
+    document.writeln(`<p>Hellow ${name} ! Whatsapp !!</p>`);
+}
+personTwo.sayHelloToPerson("Fauzan Ahmad");
+
 //  ========== Kata Kunci this ==========
 //  ========== Arrow Function di object ==========
 //  ========== Getter dan Setter ==========
