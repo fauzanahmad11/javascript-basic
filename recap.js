@@ -1021,6 +1021,38 @@ const person = {
 person.sayHello("Langleuy");
 
 //  ========== Arrow Function di object ==========
+// =====Kode : Arrow Function di Object Method=====
+document.writeln(`<p>=====Arrow Function di Object Method=====</p>`);
+const person = {
+    name: "Fauzan",
+    sayHello: (name) => {
+        console.info(`Hello ${name}`);
+    }
+};
+person.sayHello("Budi");
+
+// =====Kode : this di Arrow Function Object=====
+document.writeln(`<p>=====this di Arrow Function Object=====</p>`);
+const personTwo = {
+    name: "Fauzan",
+    sayHelloTwo: (name) => {
+        console.info(this);
+        console.info(`Hello ${name}, My name is ${this.name}`);
+    }
+};
+personTwo.sayHelloTwo("Budi");
+
+// =====Kode : this di Arrow Function Object=====
+document.writeln(`<p>=====this di Arrow Function Object=====</p>`);
+const personThree = {
+    name: "Fauzan",
+    sayHelloTwo: (name) => {
+        console.info(this);
+        console.info(`Hello ${name}, My name is ${this.name}`);
+    }
+};
+personThree.sayHelloTwo("Budi");
+
 //  ========== Getter dan Setter ==========
 //  ========== Masalah Variable var ==========
 // ========== Destructuring ==========

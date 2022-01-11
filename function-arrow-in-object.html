@@ -47,6 +47,7 @@
         ● Jadi pastikan gunakan Arrow Function hanya memang ketika kita tidak butuh fitur-fitur diatas
         */
 
+        document.writeln(`<div>Press f12</div>`);
         // =====Kode : Arrow Function di Object Method=====
         document.writeln(`<p>=====Arrow Function di Object Method=====</p>`);
         const person = {
@@ -70,14 +71,14 @@
 
         // =====Kode : this di Arrow Function Object=====
         document.writeln(`<p>=====this di Arrow Function Object=====</p>`);
-        const personTwo = {
+        const personThree = {
             name: "Fauzan",
             sayHelloTwo: (name) => {
                 console.info(this);
                 console.info(`Hello ${name}, My name is ${this.name}`);
             }
         };
-        personTwo.sayHelloTwo("Budi");
+        personThree.sayHelloTwo("Budi");
 
     </script>
 </body>
