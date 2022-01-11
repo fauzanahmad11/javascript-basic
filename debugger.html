@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugger</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 2rem;
+        }
+
+        p {
+            padding: .5rem 0;
+        }
+
+        div {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(0, 195, 255);
+            font-weight: 800;
+            font-size: 2rem;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #0e0e0e;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        /*
+        ## Debugger
+        ● Debugger digunakan untuk melakukan proses debugging
+        ● Debugging adalah proses mencari bug (masalah) yang biasa terjadi di kode program kita
+        ● Dengan debugger kita bisa menghentikan kode program di posisi yang kita inginkan (breakpoint), lalu melihat semua isi variable yang ada pada saat kode program sedang berhenti
+        */
+
+        document.writeln(`<div>Press f12</div>`);
+        // =====Kode : Debugger=====
+        console.log(`<p>=====Debugger/Debugging=====</p>`);
+        function createFullName(firstName, middleName, lastName) {
+            'use strict';
+            const fullName = `${firstName} ${middleName} ${lastName}`;
+            return fullName;
+        }
+        const name = createFullName("Fauzan", "Lejjo", "Ahmad");
+        console.log(name);
+
+        function sum(...num) {
+            // debugger; //breakpoint
+            let total = 0;
+            for (const number of num) {
+                total += number;
+            }
+            return total;
+        }
+        console.log(sum(2, 23, 3, 2, 3));
+    </script>
+</body>
+
+</html>
