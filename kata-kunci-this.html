@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Kunci This</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 2rem;
+        }
+
+        p {
+            padding: .5rem 0;
+        }
+
+        div {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(0, 195, 255);
+            font-weight: 800;
+            font-size: 2rem;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #0e0e0e;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        /*
+        ## Kata Kunci this
+        ● Kata kunci this adalah referensi ke object milik siapa
+        ● Tiap lokasi kata kunci this, bisa berbeda-beda referensi pemilik nya
+        ● Dalam Object Method, this merupakan referensi ke object pemilik function nya
+        ● Di global scope, this merupakan referensi ke global object (di browser biasanya Window)
+        ● Dalam function, this merupakan referensi ke global object (di browser biasanya Window)
+        ● Di function dengan strict mode (akan dibahas nanti), this adalah undefined
+        ● Dalam event, this merupakan referensi ke element yang menerima event (dibahas di materi Document Object Model)
+        */
+
+        // =====Kode : this di Global Scope=====
+        document.writeln(`<p>=====this di Global Scope=====</p>`);
+        console.log(this);
+
+        // =====Kode : this di Function=====
+        document.writeln(`<p>=====this di Function=====</p>`);
+        function testThis() {
+            console.log(this);
+        }
+        testThis();
+
+        // =====Kode : this di Object Method=====
+        document.writeln(`<p>=====this di Object Method=====</p>`);
+        const person = {
+            name: "Fauzan",
+            sayHello: function (name) {
+                // this = person
+                console.info(`Hi ${name}, my name is ${this.name}`);
+            }
+        }
+        person.sayHello("Langleuy");
+    </script>
+</body>
+
+</html>

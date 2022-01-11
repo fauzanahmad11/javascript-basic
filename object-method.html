@@ -40,27 +40,32 @@
 <body>
     <script>
         /*
-        ## Closure
-        ● Closure adalah kombinasi function dan bundel referensi ke data disekitarnya.
-        ● Oke agak membingungkan memang, apalagi untuk yang baru pertama belajar
-        ● Kita sudah tahu bahwa local scope tidak bisa diakses di luar scope nya
-        ● Dengan kemampuan closure, kita bisa membuat sebuah function di local scope dan referensi ke data di sekitar local scope tersebut, keluar scope nya
+        ## Object Method
+        ● Pada tipe data object, kita sudah membahas tentang property di object
+        ● Karena sebenarnya function juga merupakan salah satu tipe data, jadi function pun sebenarnya bisa ditambahkan sebagai property di object
+        ● Cara pembuatannya pun sama dengan function sebagai value
+        ● Function di object kadang disebut juga sebagai Object Method
         */
 
-        // =====Kode : Membuat Arrow Function=====
-        document.writeln(`<p>=====Membuat Arrow Function=====</p>`);
-        const createAdder = (value) => {
-            const owner = "Fauzan";
-            const add = (param) => {
-                document.writeln(`<p>${owner}</p>`);
-                return value + param;
+        // =====Kode : Membuat Object dengan Method=====
+        document.writeln(`<p>=====Membuat Object dengan Method=====</p>`);
+        const person = {
+            name: "Fauzan",
+            sayHello: function (name) {
+                document.writeln(`<p>Hellow ${name} ! Whatsapp !!</p>`);
             }
-            return add;
         }
+        person.sayHello("Fauzan Ahmad");
 
-        const addTwo = createAdder(2);
-        document.writeln(`<p>${addTwo(10)}</p>`);
-        document.writeln(`<p>${addTwo(20)}</p>`);
+        // =====Kode : Menambah Method ke Object=====
+        document.writeln(`<p>=====Menambah Method ke Object=====</p>`);
+        const personTwo = {
+            name: "Fauzan"
+        }
+        personTwo.sayHelloToPerson = function (name) {
+            document.writeln(`<p>Hellow ${name} ! Whatsapp !!</p>`);
+        }
+        personTwo.sayHelloToPerson("Fauzan Ahmad");
     </script>
 </body>
 
