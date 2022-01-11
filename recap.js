@@ -997,6 +997,29 @@ personTwo.sayHelloToPerson = function (name) {
 personTwo.sayHelloToPerson("Fauzan Ahmad");
 
 //  ========== Kata Kunci this ==========
+// =====Kode : this di Global Scope=====
+document.writeln(`<p>=====this di Global Scope=====</p>`);
+console.log(this);
+
+// =====Kode : this di Function=====
+document.writeln(`<p>=====this di Function=====</p>`);
+
+function testThis() {
+    console.log(this);
+}
+testThis();
+
+// =====Kode : this di Object Method=====
+document.writeln(`<p>=====this di Object Method=====</p>`);
+const person = {
+    name: "Fauzan",
+    sayHello: function (name) {
+        // this = person
+        console.info(`Hi ${name}, my name is ${this.name}`);
+    }
+}
+person.sayHello("Langleuy");
+
 //  ========== Arrow Function di object ==========
 //  ========== Getter dan Setter ==========
 //  ========== Masalah Variable var ==========
