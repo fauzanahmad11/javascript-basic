@@ -1054,6 +1054,38 @@ const personThree = {
 personThree.sayHelloTwo("Budi");
 
 //  ========== Getter dan Setter ==========
+// =====Kode : Getter=====
+document.writeln(`<p>=====Getter=====</p>`);
+const person = {
+    firstName: "Fauzan",
+    lastName: "Ahmad",
+    get fullName() {
+        // mengconstruct datanya secara dynamic 
+        return `${this.firstName} ${this.lastName}`;
+    },
+    set fullName(val) {
+        const array = val.split(" ");
+        this.firstName = array[0];
+        this.lastName = array[1];
+    }
+}
+// otomatis memanggil get fullName()
+document.writeln(`<p>${person.fullName}</p>`);
+
+// =====Kode : Setter=====
+document.writeln(`<p>=====Setter=====</p>`);
+person.fullName = "Antonio DeLuza";
+document.writeln(`<p>${person.firstName}</p>`);
+document.writeln(`<p>${person.lastName}</p>`);
+document.writeln(`<p>=====Setter=====</p>`);
+person.fullName = "Lambe Turah";
+document.writeln(`<p>${person.firstName}</p>`);
+document.writeln(`<p>${person.lastName}</p>`);
+document.writeln(`<p>=====Setter=====</p>`);
+person.fullName = "Turah Partai";
+document.writeln(`<p>${person.firstName}</p>`);
+document.writeln(`<p>${person.lastName}</p>`);
+
 //  ========== Masalah Variable var ==========
 // ========== Destructuring ==========
 // ========== Strict Mode ==========

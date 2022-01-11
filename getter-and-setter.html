@@ -51,6 +51,7 @@
             firstName: "Fauzan",
             lastName: "Ahmad",
             get fullName() {
+                // mengconstruct datanya secara dynamic 
                 return `${this.firstName} ${this.lastName}`;
             },
             set fullName(val) {
@@ -65,6 +66,14 @@
         // =====Kode : Setter=====
         document.writeln(`<p>=====Setter=====</p>`);
         person.fullName = "Antonio DeLuza";
+        document.writeln(`<p>${person.firstName}</p>`);
+        document.writeln(`<p>${person.lastName}</p>`);
+        document.writeln(`<p>=====Setter=====</p>`);
+        person.fullName = "Lambe Turah";
+        document.writeln(`<p>${person.firstName}</p>`);
+        document.writeln(`<p>${person.lastName}</p>`);
+        document.writeln(`<p>=====Setter=====</p>`);
+        person.fullName = "Turah Partai";
         document.writeln(`<p>${person.firstName}</p>`);
         document.writeln(`<p>${person.lastName}</p>`);
 
