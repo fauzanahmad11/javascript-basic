@@ -61,6 +61,10 @@
 
         ## Arrow Function Tanpa Kurung Parameter
         ● Jika parameter di arrow function hanya satu, kita bisa tidak menggunakan kurung pada parameter
+
+        ## Kode : Arrow Function Sebagai Parameter
+        ● Karena arrow function sama seperti anonymous function
+        ● Jadi kita juga bisa menggunakan arrow function sebagai parameter di function lain
         */
 
         // =====Kode : Membuat Arrow Function=====
@@ -92,6 +96,13 @@
         document.writeln(`<p>=====Arrow Function Tanpa Kurung Parameter=====</p>`);
         const sayStory = text => document.writeln(`<p>Lo keren bisa sampai sini bung ${text}</p>`);
         sayStory("Fauzan");
+
+        // =====Kode : Arrow Function Sebagai Parameter=====
+        document.writeln(`<p>=====Arrow Function Sebagai Parameter=====</p>`);
+        function giveMeName(callback) {
+            callback("Fauzan Ahmad");
+        }
+        giveMeName((name) => document.writeln(`<p>Hello ${name}</p>`));
     </script>
 </body>
 
