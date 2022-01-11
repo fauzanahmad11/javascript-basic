@@ -949,7 +949,31 @@ function giveMeName(callbacks) {
     callbacks("Fauzan Ahmad");
 }
 giveMeName((name) => document.writeln(`<p>Hello ${name}</p>`));
+
 //  ========== Closure ==========
+// =====Kode : Membuat Arrow Function=====
+document.writeln(`<p>=====Membuat Arrow Function=====</p>`);
+const createAdder = (value) => {
+    const owner = "Fauzan";
+    const add = (param) => {
+        document.writeln(`<p>${owner}${param}</p>`);
+        return value + param;
+    }
+    return add;
+}
+
+const addTwo = createAdder(2);
+/*
+    ketika membuat ini const addTwo = createAdder(2);
+    maka sebenarnya yang terjadi, kita seolah-olah membuat 
+    function addTwo(param) {
+        document.writeln(`<p>fauzan</p>`);
+        return 2 + param
+    }
+*/
+document.writeln(`<p>${addTwo(10)}</p>`);
+document.writeln(`<p>${addTwo(20)}</p>`);
+
 //  ========== Object Method ==========
 //  ========== Kata Kunci this ==========
 //  ========== Arrow Function di object ==========
